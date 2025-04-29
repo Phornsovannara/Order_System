@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Order System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="test-mode-toggle">
+    <label>
+      <input type="checkbox" id="testModeToggle" checked>
+      Test Mode (No real payment)
+    </label>
+  </div>
+
+  <div id="testModeIndicator" class="test-mode-indicator">TEST MODE</div>
+
+  <h2>🍽️ Restaurant Order System</h2>
+
+  <div id="orderSection">
+    <button id="viewOrdersBtn" class="view-orders-btn">View My Orders</button>
+
+    <div class="input-group">
+      <h3>Select Menu Items:</h3>
+      <div class="menu-grid" id="menuGrid">
+        <div class="loading">Loading menu items...</div>
+      </div>
+    </div>
+
+    <div class="input-group order-summary">
+      <h3>Order Summary</h3>
+      <div id="orderItems"></div>
+      <div class="order-total">
+        <span>Total:</span>
+        <span id="orderTotal">$0.00</span>
+      </div>
+    </div>
+
+    <button id="submitBtn">Test Payment</button>
+
+    <div id="paymentContainer">
+      <h3>Payment Confirmation</h3>
+      <p>Total Amount: $<span id="paymentAmount">0.00</span></p>
+      <p class="payment-instructions">For testing purposes only - no real payment required</p>
+      <button id="confirmPaymentBtn">Confirm Payment (Test)</button>
+      <div class="progress-bar" id="paymentProgress"></div>
+    </div>
+  </div>
+
+  <div id="ordersList">
+    <div class="order-history-title">
+      <h3>My Order History</h3>
+      <span class="order-table">Table: <span id="currentTableDisplay">-</span></span>
+    </div>
+    <div id="ordersContainer" class="no-orders">No orders found yet</div>
+    <button id="backToOrderBtn">Back to New Order</button>
+  </div>
+
+  <div id="statusMessage"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
